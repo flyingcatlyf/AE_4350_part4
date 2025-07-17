@@ -1,0 +1,153 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+#Operation_score_history
+#ddpg-sca
+average_reward_operation_ddpg_sca_1 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sca/1_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sca_2 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sca/2_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sca_3 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sca/3_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sca_4 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sca/4_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sca_5 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sca/5_operation/memory1_Reward_operation')
+
+#ddpg-sda
+average_reward_operation_ddpg_sda_1 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sda/1_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sda_2 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sda/6_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sda_3 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sda/3_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sda_4 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sda/4_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_sda_5 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg_sda/2_operation/memory1_Reward_operation')
+
+#ddpg
+average_reward_operation_ddpg_1 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg/1_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_2 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg/2_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_3 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg/3_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_4 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg/4_operation/memory1_Reward_operation')
+average_reward_operation_ddpg_5 = np.loadtxt('/home/yifei/PycharmProjects/Chapter5/Data_Training&Operation/Data_ddpg/5_operation/memory1_Reward_operation')
+
+
+
+#Reward_matrix
+#ddpg-sca
+average_reward_operation_ddpg_sca_1_arrary = average_reward_operation_ddpg_sca_1[0: 900000]
+average_reward_operation_ddpg_sca_1_reshape = average_reward_operation_ddpg_sca_1_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sca_2_arrary = average_reward_operation_ddpg_sca_2[0: 900000]
+average_reward_operation_ddpg_sca_2_reshape = average_reward_operation_ddpg_sca_2_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sca_3_arrary = average_reward_operation_ddpg_sca_3[0: 900000]
+average_reward_operation_ddpg_sca_3_reshape = average_reward_operation_ddpg_sca_3_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sca_4_arrary = average_reward_operation_ddpg_sca_4[0: 900000]
+average_reward_operation_ddpg_sca_4_reshape = average_reward_operation_ddpg_sca_4_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sca_5_arrary = average_reward_operation_ddpg_sca_5[0: 900000]
+average_reward_operation_ddpg_sca_5_reshape = average_reward_operation_ddpg_sca_5_arrary.reshape(3000,300)
+
+#ddpg-sda
+average_reward_operation_ddpg_sda_1_arrary = average_reward_operation_ddpg_sda_1[0: 900000]
+average_reward_operation_ddpg_sda_1_reshape = average_reward_operation_ddpg_sda_1_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sda_2_arrary = average_reward_operation_ddpg_sda_2[0: 900000]
+average_reward_operation_ddpg_sda_2_reshape = average_reward_operation_ddpg_sda_2_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sda_3_arrary = average_reward_operation_ddpg_sda_3[0: 900000]
+average_reward_operation_ddpg_sda_3_reshape = average_reward_operation_ddpg_sda_3_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sda_4_arrary = average_reward_operation_ddpg_sda_4[0: 900000]
+average_reward_operation_ddpg_sda_4_reshape = average_reward_operation_ddpg_sda_4_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_sda_5_arrary = average_reward_operation_ddpg_sda_5[0: 900000]
+average_reward_operation_ddpg_sda_5_reshape = average_reward_operation_ddpg_sda_5_arrary.reshape(3000,300)
+
+#ddpg
+average_reward_operation_ddpg_1_arrary = average_reward_operation_ddpg_1[0: 900000]
+average_reward_operation_ddpg_1_reshape = average_reward_operation_ddpg_1_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_2_arrary = average_reward_operation_ddpg_2[0: 900000]
+average_reward_operation_ddpg_2_reshape = average_reward_operation_ddpg_2_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_3_arrary = average_reward_operation_ddpg_3[0: 900000]
+average_reward_operation_ddpg_3_reshape = average_reward_operation_ddpg_3_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_4_arrary = average_reward_operation_ddpg_4[0: 900000]
+average_reward_operation_ddpg_4_reshape = average_reward_operation_ddpg_4_arrary.reshape(3000,300)
+
+average_reward_operation_ddpg_5_arrary = average_reward_operation_ddpg_5[0: 900000]
+average_reward_operation_ddpg_5_reshape = average_reward_operation_ddpg_5_arrary.reshape(3000,300)
+
+
+#mean
+average_reward_operation_ddpg_sca_1_mean=np.mean(average_reward_operation_ddpg_sca_1_reshape,axis=0)
+average_reward_operation_ddpg_sca_2_mean=np.mean(average_reward_operation_ddpg_sca_2_reshape,axis=0)
+average_reward_operation_ddpg_sca_3_mean=np.mean(average_reward_operation_ddpg_sca_3_reshape,axis=0)
+average_reward_operation_ddpg_sca_4_mean=np.mean(average_reward_operation_ddpg_sca_4_reshape,axis=0)
+average_reward_operation_ddpg_sca_5_mean=np.mean(average_reward_operation_ddpg_sca_5_reshape,axis=0)
+
+average_reward_operation_ddpg_sda_1_mean=np.mean(average_reward_operation_ddpg_sda_1_reshape,axis=0)
+average_reward_operation_ddpg_sda_2_mean=np.mean(average_reward_operation_ddpg_sda_2_reshape,axis=0)
+average_reward_operation_ddpg_sda_3_mean=np.mean(average_reward_operation_ddpg_sda_3_reshape,axis=0)
+average_reward_operation_ddpg_sda_4_mean=np.mean(average_reward_operation_ddpg_sda_4_reshape,axis=0)
+average_reward_operation_ddpg_sda_5_mean=np.mean(average_reward_operation_ddpg_sda_5_reshape,axis=0)
+
+average_reward_operation_ddpg_1_mean=np.mean(average_reward_operation_ddpg_1_reshape,axis=0)
+average_reward_operation_ddpg_2_mean=np.mean(average_reward_operation_ddpg_2_reshape,axis=0)
+average_reward_operation_ddpg_3_mean=np.mean(average_reward_operation_ddpg_3_reshape,axis=0)
+average_reward_operation_ddpg_4_mean=np.mean(average_reward_operation_ddpg_4_reshape,axis=0)
+average_reward_operation_ddpg_5_mean=np.mean(average_reward_operation_ddpg_5_reshape,axis=0)
+
+#5_instances
+#DDPG-SCA
+mean_average_reward_operation_ddpg_sca_arrary = np.concatenate((average_reward_operation_ddpg_sca_1_mean,average_reward_operation_ddpg_sca_2_mean,average_reward_operation_ddpg_sca_3_mean,average_reward_operation_ddpg_sca_4_mean,average_reward_operation_ddpg_sca_5_mean))
+mean_average_reward_operation_ddpg_sca = mean_average_reward_operation_ddpg_sca_arrary.reshape(5,300)
+average_reward_operation_ddpg_sca_mean_five=np.mean(mean_average_reward_operation_ddpg_sca,axis=0)
+average_reward_operation_ddpg_sca_max_five=np.max(mean_average_reward_operation_ddpg_sca,axis=0)
+average_reward_operation_ddpg_sca_min_five=np.min(mean_average_reward_operation_ddpg_sca,axis=0)
+
+mean_average_reward_operation_ddpg_sca_arrary_sum = np.sum(mean_average_reward_operation_ddpg_sca,axis=1)
+mean_average_reward_operation_ddpg_sca_arrary_sum_mean = np.mean(mean_average_reward_operation_ddpg_sca_arrary_sum)
+mean_average_reward_operation_ddpg_sca_arrary_sum_std = np.std(mean_average_reward_operation_ddpg_sca_arrary_sum)
+
+#DDPG-SDA
+mean_average_reward_operation_ddpg_sda_arrary = np.concatenate((average_reward_operation_ddpg_sda_1_mean,average_reward_operation_ddpg_sda_2_mean,average_reward_operation_ddpg_sda_3_mean,average_reward_operation_ddpg_sda_4_mean,average_reward_operation_ddpg_sda_5_mean))
+mean_average_reward_operation_ddpg_sda = mean_average_reward_operation_ddpg_sda_arrary.reshape(5,300)
+average_reward_operation_ddpg_sda_mean_five=np.mean(mean_average_reward_operation_ddpg_sda,axis=0)
+average_reward_operation_ddpg_sda_max_five=np.max(mean_average_reward_operation_ddpg_sda,axis=0)
+average_reward_operation_ddpg_sda_min_five=np.min(mean_average_reward_operation_ddpg_sda,axis=0)
+
+mean_average_reward_operation_ddpg_sda_arrary_sum = np.sum(mean_average_reward_operation_ddpg_sda,axis=1)
+mean_average_reward_operation_ddpg_sda_arrary_sum_mean = np.mean(mean_average_reward_operation_ddpg_sda_arrary_sum)
+mean_average_reward_operation_ddpg_sda_arrary_sum_std = np.std(mean_average_reward_operation_ddpg_sda_arrary_sum)
+
+#DDPG
+mean_average_reward_operation_ddpg_arrary = np.concatenate((average_reward_operation_ddpg_1_mean,average_reward_operation_ddpg_2_mean,average_reward_operation_ddpg_3_mean,average_reward_operation_ddpg_4_mean,average_reward_operation_ddpg_5_mean))
+mean_average_reward_operation_ddpg = mean_average_reward_operation_ddpg_arrary.reshape(5,300)
+average_reward_operation_ddpg_mean_five=np.mean(mean_average_reward_operation_ddpg,axis=0)
+average_reward_operation_ddpg_max_five=np.max(mean_average_reward_operation_ddpg,axis=0)
+average_reward_operation_ddpg_min_five=np.min(mean_average_reward_operation_ddpg,axis=0)
+
+mean_average_reward_operation_ddpg_arrary_sum = np.sum(mean_average_reward_operation_ddpg,axis=1)
+mean_average_reward_operation_ddpg_arrary_sum_mean = np.mean(mean_average_reward_operation_ddpg_arrary_sum)
+mean_average_reward_operation_ddpg_arrary_sum_std = np.std(mean_average_reward_operation_ddpg_arrary_sum)
+
+Episode = np.array(range(0,300,1))
+
+#plot_operation_baseline
+fig1 = plt.figure(figsize=(18.0,9.0))
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype']  = 42
+plt.plot(average_reward_operation_ddpg_sca_mean_five,linewidth=4.0,label='DDPG-SCA',color='C3')
+plt.fill_between(Episode,average_reward_operation_ddpg_sca_max_five,average_reward_operation_ddpg_sca_min_five,color='C3',alpha=0.2)
+plt.plot(average_reward_operation_ddpg_sda_mean_five,linewidth=4.0,label='DDPG-SDA',color='C1')
+plt.fill_between(Episode,average_reward_operation_ddpg_sda_max_five,average_reward_operation_ddpg_sda_min_five,color='C1',alpha=0.2)
+plt.plot(average_reward_operation_ddpg_mean_five,linewidth=4.0,label='DDPG',color='C0')
+plt.fill_between(Episode,average_reward_operation_ddpg_max_five,average_reward_operation_ddpg_min_five,alpha=0.2,color='C0')
+plt.xlabel('Time step [-]',fontdict={'size':35})
+plt.ylabel('Reward [-]',fontdict={'size':35})
+plt.xticks(fontsize=35)
+plt.yticks(fontsize=35)
+plt.grid(True)
+plt.legend(loc='lower right',fontsize=35)
+plt.title(r'$ \times 10^{3}$', loc='left', fontsize = 30)
+plt.show()
+
+xx
